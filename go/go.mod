@@ -201,18 +201,17 @@ require (
 )
 
 replace (
-	cosmossdk.io/api => github.com/mocachain/moca-cosmos-sdk/api v0.0.0-20250908083143-e28da82c630a
-	// cosmossdk.io/math => github.com/mocachain/moca-cosmos-sdk/math v0.0.0-20250908083143-e28da82c630a
-	cosmossdk.io/simapp => github.com/mocachain/moca-cosmos-sdk/simapp v0.0.0-20250908083143-e28da82c630a
+	cosmossdk.io/api => github.com/mocachain/moca-cosmos-sdk/api v1.1.0
+	cosmossdk.io/simapp => github.com/mocachain/moca-cosmos-sdk/simapp v1.1.0
 	github.com/btcsuite/btcd => github.com/btcsuite/btcd v0.22.1
-	github.com/cometbft/cometbft => github.com/mocachain/moca-cometbft v1.0.0-alpha.1
-	github.com/cometbft/cometbft-db => github.com/mocachain/moca-cometbft-db v1.0.0-alpha.1
+	github.com/cometbft/cometbft => github.com/mocachain/moca-cometbft v1.1.0
+	github.com/cometbft/cometbft-db => github.com/mocachain/moca-cometbft-db v1.1.0
 	github.com/confio/ics23/go => github.com/cosmos/cosmos-sdk/ics23/go v0.8.0
-	github.com/cosmos/cosmos-sdk => github.com/mocachain/moca-cosmos-sdk v1.0.0-alpha.1
-	github.com/cosmos/iavl => github.com/mocachain/moca-iavl v1.0.0-alpha.1
-	github.com/cosmos/ibc-go/v10 => github.com/mocachain/moca-ibc-go/v10 v10.0.0-alpha.1
-	github.com/ethereum/go-ethereum => github.com/mocachain/go-ethereum v1.10.27-0.20250415055204-fbf69808eb10
-	github.com/evmos/evmos/v12 => github.com/mocachain/moca/v12 v12.0.0-alpha.1
+	github.com/cosmos/cosmos-sdk => github.com/mocachain/moca-cosmos-sdk v1.1.0
+	github.com/cosmos/iavl => github.com/mocachain/moca-iavl v1.1.0
+	github.com/cosmos/ibc-go/v10 => github.com/mocachain/moca-ibc-go/v10 v10.1.0
+	github.com/ethereum/go-ethereum => github.com/mocachain/go-ethereum v1.10.27-moca.1
+	github.com/evmos/evmos/v12 => github.com/mocachain/moca/v12 v12.1.0
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
 )
