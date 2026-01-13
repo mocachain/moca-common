@@ -211,7 +211,7 @@ replace (
 	github.com/cosmos/cosmos-sdk => github.com/mocachain/moca-cosmos-sdk v1.0.0-alpha.1
 	github.com/cosmos/iavl => github.com/mocachain/moca-iavl v1.0.0-alpha.1
 	github.com/cosmos/ibc-go/v10 => github.com/mocachain/moca-ibc-go/v10 v10.0.0-alpha.1
-	github.com/ethereum/go-ethereum => github.com/zkMeLabs/go-ethereum v1.10.27-0.20250415055204-fbf69808eb10
+	github.com/ethereum/go-ethereum => github.com/mocachain/go-ethereum v1.10.27-0.20250415055204-fbf69808eb10
 	github.com/evmos/evmos/v12 => github.com/mocachain/moca/v12 v12.0.0-alpha.1
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
