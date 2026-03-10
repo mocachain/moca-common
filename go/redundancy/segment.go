@@ -6,7 +6,7 @@ import (
 
 	"github.com/rs/zerolog/log"
 
-	"github.com/mocachain/moca-common/go/redundancy/erasure"
+	"github.com/Mocachain/moca-common/go/redundancy/erasure"
 )
 
 // PieceObject - details of the erasure encoded piece

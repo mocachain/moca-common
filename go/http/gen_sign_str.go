@@ -8,7 +8,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/mocachain/moca-common/go/hash"
+	"github.com/Mocachain/moca-common/go/hash"
 )
 
 var supportHeads = []string{

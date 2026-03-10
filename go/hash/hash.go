@@ -12,7 +12,7 @@ import (
 	"github.com/rs/zerolog/log"
 
 	storagetypes "github.com/evmos/evmos/v12/x/storage/types"
-	"github.com/mocachain/moca-common/go/redundancy"
+	"github.com/Mocachain/moca-common/go/redundancy"
 )
 
 const (
