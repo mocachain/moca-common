@@ -211,14 +211,14 @@ replace (
 	cosmossdk.io/store => github.com/mocachain/moca-cosmos-sdk/store v1.1.0-rc1-66c0054
 	github.com/btcsuite/btcd => github.com/btcsuite/btcd v0.22.1
 	github.com/btcsuite/btcd/btcec/v2 => github.com/btcsuite/btcd/btcec/v2 v2.3.4
-	github.com/cometbft/cometbft => github.com/mocachain/moca-cometbft v1.1.0-rc1-f85713e
+	github.com/cometbft/cometbft => github.com/mocachain/moca-cometbft v1.1.2-rc1-f85713e
 	github.com/cometbft/cometbft-db => github.com/mocachain/moca-cometbft-db v1.1.0-rc1-22256c4
 	github.com/confio/ics23/go => github.com/cosmos/cosmos-sdk/ics23/go v0.8.0
 	github.com/cosmos/cosmos-sdk => github.com/mocachain/moca-cosmos-sdk v1.1.0-rc1-66c0054
 	github.com/cosmos/iavl => github.com/mocachain/moca-iavl v1.1.0-rc1-82a95b2
-	github.com/cosmos/ibc-go/v10 => github.com/mocachain/moca-ibc-go/v10 v10.2.0-rc0.0.20260317055315-676db00cdb55
+	github.com/cosmos/ibc-go/v10 => github.com/mocachain/moca-ibc-go/v10 v10.1.0-rc3-74a70fb
 	github.com/ethereum/go-ethereum => github.com/mocachain/go-ethereum v1.10.27-rc1-7c25950
-	github.com/evmos/evmos/v12 => github.com/mocachain/moca/v12 v12.0.1-rc2-ca730f1
+	github.com/evmos/evmos/v12 => github.com/mocachain/moca/v12 v12.1.0-rc1-ca730f1
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
 )

@@ -615,8 +615,8 @@ github.com/mmcloughlin/addchain v0.4.0 h1:SobOdjm2xLj1KkXN5/n0xTIWyZA2+s99UCY1iP
 github.com/mmcloughlin/addchain v0.4.0/go.mod h1:A86O+tHqZLMNO4w6ZZ4FlVQEadcoqkyU72HC5wJ4RlU=
 github.com/mocachain/go-ethereum v1.10.27-rc1-7c25950 h1:qsTzrdecEOMnDB6DnHOM8/Rm1jHE0WsV3kBWqGZy5yw=
 github.com/mocachain/go-ethereum v1.10.27-rc1-7c25950/go.mod h1:I5j+rJP+h5ZruTJ+fu1nVWkd4XmuodZ3pzYjAzTreeg=
-github.com/mocachain/moca-cometbft v1.1.0-rc1-f85713e h1:UfoFryXCMRhV5yy4xa9ImccQ9aHLFsJKVJV3kwscOEA=
-github.com/mocachain/moca-cometbft v1.1.0-rc1-f85713e/go.mod h1:RXKZzgk3b0mBvoWaANTHLtXdKNQ/HfAlbSB5RMkawS4=
+github.com/mocachain/moca-cometbft v1.1.2-rc1-f85713e h1:pMwvZacUfLyXfgkxpHIuABFw7I3Lp4VWvlBh/3ji2As=
+github.com/mocachain/moca-cometbft v1.1.2-rc1-f85713e/go.mod h1:RXKZzgk3b0mBvoWaANTHLtXdKNQ/HfAlbSB5RMkawS4=
 github.com/mocachain/moca-cometbft-db v1.1.0-rc1-22256c4 h1:Q/nKzuF7WvDoPJUznhNXWK5/ZQVuXuSuSw8C1s7OXVI=
 github.com/mocachain/moca-cometbft-db v1.1.0-rc1-22256c4/go.mod h1:GDPJAC/iFHNjmZZPN8V8C1yr/eyityhi2W1hz2MGKSc=
 github.com/mocachain/moca-cosmos-sdk v1.1.0-rc1-66c0054 h1:4zpsruSsXIQB6D5fXyOh+aK9Ip/9gZYEeObiY2jtb/c=
@@ -629,10 +629,10 @@ github.com/mocachain/moca-cosmos-sdk/store v1.1.0-rc1-66c0054 h1:DYbWxu85Q6AmkDv
 github.com/mocachain/moca-cosmos-sdk/store v1.1.0-rc1-66c0054/go.mod h1:fdDJb6j31L01kK/31ev0hEQ1wWmAX3Pur9VFlt0ZpLc=
 github.com/mocachain/moca-iavl v1.1.0-rc1-82a95b2 h1:77AmIvao4nXRcb/fo1zt6rBiLF+qlr2mzEYPgWGx4EE=
 github.com/mocachain/moca-iavl v1.1.0-rc1-82a95b2/go.mod h1:llfcEJML+85FDrd1XlU6YRa7tFnyPYK/T04iOSXe+1I=
-github.com/mocachain/moca-ibc-go/v10 v10.2.0-rc0.0.20260317055315-676db00cdb55 h1:U9S0j9MJfamKr2RWq2GMMTi/ZSHcSYhsN7qbihVKhF8=
-github.com/mocachain/moca-ibc-go/v10 v10.2.0-rc0.0.20260317055315-676db00cdb55/go.mod h1:TwHQGhGAXiiXEfdSx5wtb+T57h/zzoqZTOpYF5YTFT0=
-github.com/mocachain/moca/v12 v12.0.1-rc2-ca730f1 h1:exEQep9H+5KOnDYQft9fVg15mxXlWXXKJijHw8M1/eQ=
-github.com/mocachain/moca/v12 v12.0.1-rc2-ca730f1/go.mod h1:PARDxNTGomYwNy9znKyjQRz9+PmIHmabDyh/RTZ5G6M=
+github.com/mocachain/moca-ibc-go/v10 v10.1.0-rc3-74a70fb h1:c/pp/SzzIVMirbae23YmVVx9oUvuJ01HDcQtWZ2SgyQ=
+github.com/mocachain/moca-ibc-go/v10 v10.1.0-rc3-74a70fb/go.mod h1:9rt00nBoKg/agSoEoRo9Q30q350HlT8Vt0m4xOb5ZGM=
+github.com/mocachain/moca/v12 v12.1.0-rc1-ca730f1 h1:lbFBLUfiCKwcpp/BEvzRiSOZQMXFSg/VwlD8YPy9/0w=
+github.com/mocachain/moca/v12 v12.1.0-rc1-ca730f1/go.mod h1:PARDxNTGomYwNy9znKyjQRz9+PmIHmabDyh/RTZ5G6M=
 github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
 github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
 github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742/go.mod h1:bx2lNnkwVCuqBIxFjflWJWanXIb3RllmbCylyMrvgv0=
