@@ -629,8 +629,8 @@ github.com/mocachain/moca-cosmos-sdk/store v1.2.0-rc0.0.20260320030230-23b35dc2e
 github.com/mocachain/moca-cosmos-sdk/store v1.2.0-rc0.0.20260320030230-23b35dc2e9a2/go.mod h1:fdDJb6j31L01kK/31ev0hEQ1wWmAX3Pur9VFlt0ZpLc=
 github.com/mocachain/moca-iavl v1.2.0-rc0.0.20260318093905-7d754d41e8e9 h1:p6kktdDRLMDsQe16y6J5Wm8y0zgg4WgJNAGCZ071Ec4=
 github.com/mocachain/moca-iavl v1.2.0-rc0.0.20260318093905-7d754d41e8e9/go.mod h1:llfcEJML+85FDrd1XlU6YRa7tFnyPYK/T04iOSXe+1I=
-github.com/mocachain/moca-ibc-go/v10 v10.2.0-rc0.0.20260320030634-714c78631c2a h1:cBmQ5ei0F4QbkcMVNPDbehG0Vgr66N53G9PwwF0zjtY=
-github.com/mocachain/moca-ibc-go/v10 v10.2.0-rc0.0.20260320030634-714c78631c2a/go.mod h1:QKRV0++poxM0RuoX4DjFvMawv6z71Xxi/1tx0SPc5eU=
+github.com/mocachain/moca-ibc-go/v10 v10.2.0-rc0.0.20260320034349-5cacbc5130b6 h1:SaR4y5WjbCYEG7SCqIn2CbL62LXOds0kx/WYI4Ay3i0=
+github.com/mocachain/moca-ibc-go/v10 v10.2.0-rc0.0.20260320034349-5cacbc5130b6/go.mod h1:M9ckp5qY21Kz1kCvFFEF735KXYAbP+O53CbJgtmvzqc=
 github.com/mocachain/moca/v12 v12.2.0-rc4.0.20260319071234-22be1bc8c729 h1:lAhUGTxcdwU0rS1vkgrzIqcZ6jwt9JnHFkvHKqpP+6o=
 github.com/mocachain/moca/v12 v12.2.0-rc4.0.20260319071234-22be1bc8c729/go.mod h1:U4CW+3Ji0N5Cfc7FcXCSMpYuPZnNmfdDV6g668G4d8Y=
 github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
