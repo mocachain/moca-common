@@ -206,19 +206,19 @@ require (
 )
 
 replace (
-	cosmossdk.io/api => github.com/mocachain/moca-cosmos-sdk/api v1.1.0-rc1-66c0054
-	cosmossdk.io/simapp => github.com/mocachain/moca-cosmos-sdk/simapp v1.1.0-rc1-66c0054
-	cosmossdk.io/store => github.com/mocachain/moca-cosmos-sdk/store v1.1.0-rc1-66c0054
+	cosmossdk.io/api => github.com/mocachain/moca-cosmos-sdk/api v1.2.0-rc0.0.20260320030230-23b35dc2e9a2
+	cosmossdk.io/simapp => github.com/mocachain/moca-cosmos-sdk/simapp v1.2.0-rc0.0.20260320030230-23b35dc2e9a2
+	cosmossdk.io/store => github.com/mocachain/moca-cosmos-sdk/store v1.2.0-rc0.0.20260320030230-23b35dc2e9a2
 	github.com/btcsuite/btcd => github.com/btcsuite/btcd v0.22.1
 	github.com/btcsuite/btcd/btcec/v2 => github.com/btcsuite/btcd/btcec/v2 v2.3.4
-	github.com/cometbft/cometbft => github.com/mocachain/moca-cometbft v1.2.0-rc1-f85713e
-	github.com/cometbft/cometbft-db => github.com/mocachain/moca-cometbft-db v1.1.0-rc1-22256c4
+	github.com/cometbft/cometbft => github.com/mocachain/moca-cometbft v1.2.0-rc0.0.20260319090650-6c202b1a2ec8
+	github.com/cometbft/cometbft-db => github.com/mocachain/moca-cometbft-db v1.1.1-0.20260316053933-22256c4c85b3
 	github.com/confio/ics23/go => github.com/cosmos/cosmos-sdk/ics23/go v0.8.0
-	github.com/cosmos/cosmos-sdk => github.com/mocachain/moca-cosmos-sdk v1.2.0-rc1-66c0054
-	github.com/cosmos/iavl => github.com/mocachain/moca-iavl v1.2.0-rc1-82a95b2
-	github.com/cosmos/ibc-go/v10 => github.com/mocachain/moca-ibc-go/v10 v10.2.0-rc1-5d902f9
-	github.com/ethereum/go-ethereum => github.com/mocachain/go-ethereum v1.10.27-rc1-7c25950
-	github.com/evmos/evmos/v12 => github.com/mocachain/moca/v12 v12.2.0-rc1-ca730f1
+	github.com/cosmos/cosmos-sdk => github.com/mocachain/moca-cosmos-sdk v1.2.0-rc0.0.20260320030230-23b35dc2e9a2
+	github.com/cosmos/iavl => github.com/mocachain/moca-iavl v1.2.0-rc0.0.20260318093905-7d754d41e8e9
+	github.com/cosmos/ibc-go/v10 => github.com/mocachain/moca-ibc-go/v10 v10.2.0-rc0.0.20260320034349-5cacbc5130b6
+	github.com/ethereum/go-ethereum => github.com/mocachain/go-ethereum v1.10.27-moca.2.0.20260318105122-e849a5b4edee
+	github.com/evmos/evmos/v12 => github.com/mocachain/moca/v12 v12.2.0-rc4.0.20260319071234-22be1bc8c729
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
 )
