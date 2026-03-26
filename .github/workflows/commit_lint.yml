@@ -3,12 +3,12 @@ name: Lint Commit Messages
 on:
   push:
     branches:
-      - master
+      - main
       - develop
 
   pull_request:
     branches:
-      - master
+      - main
       - develop
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
       GOPRIVATE: github.com/mocachain
       GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_SECRET }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Setup GitHub Token
@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             ~/.npm
