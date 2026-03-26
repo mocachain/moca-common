@@ -6,7 +6,7 @@ on:
       - .github/workflows/go.yml
   push:
     branches:
-      - master
+      - main
 
 permissions:
   contents: read
@@ -28,11 +28,11 @@ jobs:
     name: Golang Code Lint
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/setup-go@v3
+      - uses: actions/setup-go@v5
         with:
           # ci is set to go1.19 to match developer setups
           go-version: ${{ matrix.go-version }}
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup GitHub Token
         run: git config --global url.https://$GH_ACCESS_TOKEN@github.com/.insteadOf https://github.com/
       - name: golangci-lint
@@ -56,10 +56,10 @@ jobs:
       GOPRIVATE: github.com/mocachain
       GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_SECRET }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup GitHub Token
         run: git config --global url.https://$GH_ACCESS_TOKEN@github.com/.insteadOf https://github.com/
-      - uses: actions/setup-go@v3
+      - uses: actions/setup-go@v5
         with:
           go-version: ${{ matrix.go-version }}
       - name: test
