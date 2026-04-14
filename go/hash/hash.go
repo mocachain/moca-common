@@ -65,8 +65,6 @@ func (i *IntegrityHasher) Append(data []byte) error {
 	if len(i.buffer) >= int(i.segmentSize) {
 		return errors.New("the buffer of handler should be less than segmentSize")
 	}
-	originBuffer := make([]byte, len(i.buffer))
-	copy(originBuffer, i.buffer)
 	// use tempBuffer to store exceed data
 	var tempBuffer []byte
 	totalSize := int64(dataSize + len(i.buffer))
