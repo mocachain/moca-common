@@ -8,7 +8,7 @@ linters:
   enable:
     - depguard
     - dogsled
-    - exportloopref
+    - copyloopvar
     - goconst
     - gocritic
     - gofumpt
