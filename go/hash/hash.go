@@ -9,10 +9,8 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/rs/zerolog/log"
-
-	storagetypes "github.com/mocachain/moca/v2/x/storage/types"
 	"github.com/mocachain/moca-common/go/redundancy"
+	"github.com/rs/zerolog/log"
 )
 
 const (
@@ -99,11 +97,11 @@ func (i *IntegrityHasher) Append(data []byte) error {
 }
 
 // Finish return the result of the Integrity hashes
-func (i *IntegrityHasher) Finish() ([][]byte, int64, storagetypes.RedundancyType, error) {
+func (i *IntegrityHasher) Finish() ([][]byte, int64, RedundancyType, error) {
 	// deal with  remain content tot be computed
 	if len(i.buffer) > 0 {
 		if err := i.computeBufferHash(); err != nil {
-			return nil, 0, storagetypes.REDUNDANCY_EC_TYPE, err
+			return nil, 0, RedundancyECType, err
 		}
 	}
 
@@ -122,7 +120,7 @@ func (i *IntegrityHasher) Finish() ([][]byte, int64, storagetypes.RedundancyType
 	}
 	wg.Wait()
 
-	return hashList, i.contentLen, storagetypes.REDUNDANCY_EC_TYPE, nil
+	return hashList, i.contentLen, RedundancyECType, nil
 }
 
 // computeBufferHash erasure encode the buffer of IntegrityHasher and compute the hash
@@ -155,7 +153,7 @@ func (i *IntegrityHasher) computeBufferHash() error {
 // If isSerial is true, compute the integrity hash using the serial version
 // If isSerial is false or not provided, compute the integrity hash using the parallel version
 func ComputeIntegrityHash(reader io.Reader, segmentSize int64, dataShards, parityShards int, isSerial bool) ([][]byte,
-	int64, storagetypes.RedundancyType, error,
+	int64, RedundancyType, error,
 ) {
 	if isSerial {
 		return ComputeIntegrityHashSerial(reader, segmentSize, dataShards, parityShards)
@@ -166,7 +164,7 @@ func ComputeIntegrityHash(reader io.Reader, segmentSize int64, dataShards, parit
 // ComputeIntegrityHashSerial split the reader into segment, ec encode the data, compute the hash roots of pieces in a serial way
 // return the hash result array list and data size
 func ComputeIntegrityHashSerial(reader io.Reader, segmentSize int64, dataShards, parityShards int) ([][]byte, int64,
-	storagetypes.RedundancyType, error,
+	RedundancyType, error,
 ) {
 	var segChecksumList [][]byte
 	ecShards := dataShards + parityShards
@@ -185,7 +183,7 @@ func ComputeIntegrityHashSerial(reader io.Reader, segmentSize int64, dataShards,
 		if err != nil {
 			if err != io.EOF {
 				log.Error().Msg("failed to read content:" + err.Error())
-				return nil, 0, storagetypes.REDUNDANCY_EC_TYPE, err
+				return nil, 0, RedundancyECType, err
 			}
 			break
 		}
@@ -198,7 +196,7 @@ func ComputeIntegrityHashSerial(reader io.Reader, segmentSize int64, dataShards,
 			segChecksumList = append(segChecksumList, checksum)
 
 			if err = encodeAndComputeHash(encodeDataHash, data, dataShards, parityShards); err != nil {
-				return nil, 0, storagetypes.REDUNDANCY_EC_TYPE, err
+				return nil, 0, RedundancyECType, err
 			}
 		}
 	}
@@ -219,7 +217,7 @@ func ComputeIntegrityHashSerial(reader io.Reader, segmentSize int64, dataShards,
 
 	wg.Wait()
 
-	return hashList, contentLen, storagetypes.REDUNDANCY_EC_TYPE, nil
+	return hashList, contentLen, RedundancyECType, nil
 }
 
 func encodeAndComputeHash(encodeDataHash [][][]byte, segment []byte, dataShards, parityShards int) error {
@@ -240,12 +238,12 @@ func encodeAndComputeHash(encodeDataHash [][][]byte, segment []byte, dataShards,
 
 // ComputerHashFromFile open a local file and compute hash result and segmentSize
 func ComputerHashFromFile(filePath string, segmentSize int64, dataShards, parityShards int) ([][]byte, int64,
-	storagetypes.RedundancyType, error,
+	RedundancyType, error,
 ) {
 	f, err := os.Open(filePath)
 	if err != nil {
 		log.Error().Msg("failed to open file:" + err.Error())
-		return nil, 0, storagetypes.REDUNDANCY_EC_TYPE, err
+		return nil, 0, RedundancyECType, err
 	}
 	defer f.Close()
 
@@ -254,7 +252,7 @@ func ComputerHashFromFile(filePath string, segmentSize int64, dataShards, parity
 
 // ComputerHashFromBuffer support computing hash and segmentSize from byte buffer
 func ComputerHashFromBuffer(content []byte, segmentSize int64, dataShards, parityShards int) ([][]byte, int64,
-	storagetypes.RedundancyType, error,
+	RedundancyType, error,
 ) {
 	reader := bytes.NewReader(content)
 	return ComputeIntegrityHash(reader, segmentSize, dataShards, parityShards, false)
@@ -301,7 +299,7 @@ func hashWorker(jobs <-chan SegmentInfo, errChan chan<- error, dataShards, parit
 // ComputeIntegrityHashParallel split the reader into segment, ec encode the data, compute the hash roots of pieces using
 // return the hash result array list and data segmentSize
 func ComputeIntegrityHashParallel(reader io.Reader, segmentSize int64, dataShards, parityShards int) ([][]byte, int64,
-	storagetypes.RedundancyType, error,
+	RedundancyType, error,
 ) {
 	var (
 		segChecksumList [][]byte
@@ -336,7 +334,7 @@ func ComputeIntegrityHashParallel(reader io.Reader, segmentSize int64, dataShard
 		if err != nil {
 			if err != io.EOF {
 				log.Error().Msg("failed to read content:" + err.Error())
-				return nil, 0, storagetypes.REDUNDANCY_EC_TYPE, err
+				return nil, 0, RedundancyECType, err
 			}
 			break
 		}
@@ -363,20 +361,20 @@ func ComputeIntegrityHashParallel(reader io.Reader, segmentSize int64, dataShard
 	for err := range errChan {
 		if err != nil {
 			log.Error().Msg("err chan detected err:" + err.Error())
-			return nil, 0, storagetypes.REDUNDANCY_EC_TYPE, err
+			return nil, 0, RedundancyECType, err
 		}
 	}
 
 	for i := 0; i < jobNum; i++ {
 		segHashValue, ok := segHashMap.Load(i)
 		if !ok {
-			return nil, 0, storagetypes.REDUNDANCY_EC_TYPE, fmt.Errorf("fail to load the segment hash")
+			return nil, 0, RedundancyECType, fmt.Errorf("fail to load the segment hash")
 		}
 		segChecksumList = append(segChecksumList, segHashValue.([]byte))
 
 		pieceHashValue, ok := pieceHashMap.Load(i)
 		if !ok {
-			return nil, 0, storagetypes.REDUNDANCY_EC_TYPE, fmt.Errorf("fail to load the segment hash")
+			return nil, 0, RedundancyECType, fmt.Errorf("fail to load the segment hash")
 		}
 		hashValues := pieceHashValue.([][]byte)
 		for j := 0; j < len(encodeDataHash); j++ {
@@ -398,5 +396,5 @@ func ComputeIntegrityHashParallel(reader io.Reader, segmentSize int64, dataShard
 	}
 
 	wg.Wait()
-	return hashList, contentLen, storagetypes.REDUNDANCY_EC_TYPE, nil
+	return hashList, contentLen, RedundancyECType, nil
 }
