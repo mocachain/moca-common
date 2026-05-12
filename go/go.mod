@@ -7,7 +7,7 @@ toolchain go1.23.11
 require (
 	github.com/cosmos/cosmos-sdk v0.50.13
 	github.com/ethereum/go-ethereum v1.15.5
-	github.com/mocachain/moca/v2 v2.0.0
+	github.com/mocachain/moca/v2 v2.0.0-20260508143057-5666254d3403
 	github.com/klauspost/reedsolomon v1.11.8
 	github.com/rs/zerolog v1.34.0
 	github.com/stretchr/testify v1.10.0
@@ -218,7 +218,6 @@ replace (
 	github.com/cosmos/iavl => github.com/mocachain/moca-iavl v1.2.0-rc0.0.20260318093905-7d754d41e8e9
 	github.com/cosmos/ibc-go/v10 => github.com/mocachain/moca-ibc-go/v10 v10.2.0-rc0.0.20260320043125-89f62f919f39
 	github.com/ethereum/go-ethereum => github.com/mocachain/go-ethereum v1.10.27-moca.2.0.20260318105122-e849a5b4edee
-	github.com/mocachain/moca/v2 => ../../moca
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
 )

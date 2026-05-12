@@ -633,6 +633,8 @@ github.com/mocachain/moca-ibc-go/v10 v10.2.0-rc0.0.20260320043125-89f62f919f39 h
 github.com/mocachain/moca-ibc-go/v10 v10.2.0-rc0.0.20260320043125-89f62f919f39/go.mod h1:M9ckp5qY21Kz1kCvFFEF735KXYAbP+O53CbJgtmvzqc=
 github.com/mocachain/moca/v12 v12.2.0-rc4.0.20260320060615-9f8f08384ec3 h1:jJwGt/OiE3v/jF1rQ0XQN8J+IaO7wnbnvmGo0jd7czI=
 github.com/mocachain/moca/v12 v12.2.0-rc4.0.20260320060615-9f8f08384ec3/go.mod h1:/H8qfigoI3Tx0Tp75jPhLBmsofY+Ui8rgupcswsAQng=
+github.com/mocachain/moca/v2 v2.0.0-20260508143057-5666254d3403 h1:S6+LA0/ZwUSTnonHN2Ydwc4uhkZAps0j15k2czZwcVA=
+github.com/mocachain/moca/v2 v2.0.0-20260508143057-5666254d3403/go.mod h1:/dhIEt9G0QawpRrg+ulCzQsYiZw4KmVBdvPqLxCCW6I=
 github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
 github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
 github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742/go.mod h1:bx2lNnkwVCuqBIxFjflWJWanXIb3RllmbCylyMrvgv0=
