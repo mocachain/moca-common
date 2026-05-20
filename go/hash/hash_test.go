@@ -12,6 +12,7 @@ import (
 	"time"
 
 	"github.com/mocachain/moca-common/go/redundancy"
+	storagetypes "github.com/mocachain/moca/v2/x/storage/types"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -34,7 +35,7 @@ func TestHash(t *testing.T) {
 	if size != length {
 		t.Errorf("compute segmentSize error")
 	}
-	if redundancyType != RedundancyECType {
+	if redundancyType != storagetypes.REDUNDANCY_EC_TYPE {
 		t.Errorf("compare  redundnacy type error")
 	}
 
