@@ -9,10 +9,9 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/rs/zerolog/log"
-
-	storagetypes "github.com/evmos/evmos/v12/x/storage/types"
 	"github.com/mocachain/moca-common/go/redundancy"
+	storagetypes "github.com/mocachain/moca/v2/x/storage/types"
+	"github.com/rs/zerolog/log"
 )
 
 const (

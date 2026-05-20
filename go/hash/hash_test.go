@@ -11,10 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stretchr/testify/assert"
-
-	storagetypes "github.com/evmos/evmos/v12/x/storage/types"
 	"github.com/mocachain/moca-common/go/redundancy"
+	storagetypes "github.com/mocachain/moca/v2/x/storage/types"
+	"github.com/stretchr/testify/assert"
 )
 
 const (
