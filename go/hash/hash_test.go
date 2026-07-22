@@ -29,7 +29,7 @@ func TestHash(t *testing.T) {
 
 	hashResult, size, redundancyType, err := ComputeIntegrityHash(contentToHash, int64(segmentSize), redundancy.DataBlocks, redundancy.ParityBlocks, false)
 	if err != nil {
-		t.Errorf(err.Error())
+		t.Errorf("%s", err.Error())
 	}
 	fmt.Println("hash cost time:", time.Since(start).Milliseconds(), "ms")
 	if size != length {
@@ -70,7 +70,7 @@ func TestHashResultSerial(t *testing.T) {
 	}
 	hashList, _, _, err := ComputeIntegrityHashSerial(bytes.NewReader(buffer.Bytes()), int64(segmentSize), redundancy.DataBlocks, redundancy.ParityBlocks)
 	if err != nil {
-		t.Errorf(err.Error())
+		t.Errorf("%s", err.Error())
 	}
 
 	// this is generated from sp side
@@ -102,7 +102,7 @@ func TestParallelHashResult(t *testing.T) {
 
 	hashList, _, _, err := ComputeIntegrityHashParallel(bytes.NewReader(buffer.Bytes()), int64(segmentSize), redundancy.DataBlocks, redundancy.ParityBlocks)
 	if err != nil {
-		t.Errorf(err.Error())
+		t.Errorf("%s", err.Error())
 	}
 
 	// this is generated from sp side
@@ -160,14 +160,14 @@ func compareHashResult(buffer bytes.Buffer, t *testing.T) {
 	start := time.Now()
 	expectedHashList, _, _, err := ComputeIntegrityHash(bytes.NewReader(buffer.Bytes()), int64(segmentSize), redundancy.DataBlocks, redundancy.ParityBlocks, false)
 	if err != nil {
-		t.Errorf(err.Error())
+		t.Errorf("%s", err.Error())
 	}
 	fmt.Println(" serial computing hash cost time:", time.Since(start).Milliseconds(), "ms")
 
 	start = time.Now()
 	paralleResult, _, _, err := ComputeIntegrityHashParallel(bytes.NewReader(buffer.Bytes()), int64(segmentSize), redundancy.DataBlocks, redundancy.ParityBlocks)
 	if err != nil {
-		t.Errorf(err.Error())
+		t.Errorf("%s", err.Error())
 	}
 	fmt.Println(" parallel computing hash cost time:", time.Since(start).Milliseconds(), "ms")
 
@@ -210,18 +210,18 @@ func TestIntegrityHasher(t *testing.T) {
 		n, err := reader.Read(seg)
 		if err != nil {
 			if err != io.EOF {
-				t.Errorf(err.Error())
+				t.Errorf("%s", err.Error())
 			}
 			break
 		}
 		err = hashHandler.Append(seg[:n])
 		if err != nil {
-			t.Errorf(err.Error())
+			t.Errorf("%s", err.Error())
 		}
 	}
 
 	if err := verifyHashResult(hashHandler, expectedHashList, int64(contentlen)); err != nil {
-		t.Errorf(err.Error())
+		t.Errorf("%s", err.Error())
 	}
 
 	hashHandler.Init()
@@ -232,18 +232,18 @@ func TestIntegrityHasher(t *testing.T) {
 		n, err := reader.Read(seg)
 		if err != nil {
 			if err != io.EOF {
-				t.Errorf(err.Error())
+				t.Errorf("%s", err.Error())
 			}
 			break
 		}
 		err = hashHandler.Append(seg[:n])
 		if err != nil {
-			t.Errorf(err.Error())
+			t.Errorf("%s", err.Error())
 		}
 	}
 
 	if err := verifyHashResult(hashHandler, expectedHashList, int64(contentlen)); err != nil {
-		t.Errorf(err.Error())
+		t.Errorf("%s", err.Error())
 	}
 }
 
