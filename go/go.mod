@@ -225,7 +225,7 @@ replace (
 	github.com/btcsuite/btcd/btcec/v2 => github.com/btcsuite/btcd/btcec/v2 v2.3.4
 	github.com/cometbft/cometbft => github.com/mocachain/moca-cometbft v1.2.0-rc1
 	github.com/confio/ics23/go => github.com/cosmos/ics23/go v0.10.0
-	github.com/cosmos/cosmos-sdk => github.com/mocachain/moca-cosmos-sdk v1.2.1-0.20260702040635-1ff7bfd0e495
+	github.com/cosmos/cosmos-sdk => github.com/mocachain/moca-cosmos-sdk v1.4.0-rc0
 	github.com/ethereum/go-ethereum => github.com/cosmos/go-ethereum v1.16.2-cosmos-1
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
