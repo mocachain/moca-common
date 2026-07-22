@@ -6,7 +6,7 @@ require (
 	github.com/cosmos/cosmos-sdk v0.53.7
 	github.com/ethereum/go-ethereum v1.15.11
 	github.com/klauspost/reedsolomon v1.11.8
-	github.com/mocachain/moca/v2 v2.0.0-20260722052901-9c0f8fe91cfe
+	github.com/mocachain/moca/v2 v2.0.0-rc0
 	github.com/rs/zerolog v1.35.1
 	github.com/stretchr/testify v1.11.1
 )
