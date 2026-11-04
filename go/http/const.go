@@ -18,7 +18,12 @@ const (
 	HTTPHeaderDate = "X-Gnfd-Date"
 	// HTTPHeaderExpiryTimestamp defines the expiry timestamp, which is the ISO 8601 datetime string (e.g. 2021-09-30T16:25:24Z), and the maximum Timestamp since the request sent must be less than MaxExpiryAgeInSec (seven days).
 	HTTPHeaderExpiryTimestamp = "X-Gnfd-Expiry-Timestamp"
-	HTTPHeaderAuthorization   = "Authorization"
+
+	// HTTPHeaderNonce defines a client-generated random value that makes each signed
+	// request unique; servers may track it within the request expiry to enforce
+	// single use.
+	HTTPHeaderNonce         = "X-Gnfd-Nonce"
+	HTTPHeaderAuthorization = "Authorization"
 	// MaxExpiryAgeInSec
 	MaxExpiryAgeInSec = 3600 * 24 * 7 // 7 days
 
