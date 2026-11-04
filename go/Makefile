@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-GO_TOOLCHAIN ?= go1.23.11
+GO_TOOLCHAIN ?= go1.26.10
 GO := env GOTOOLCHAIN=$(GO_TOOLCHAIN) go
 
 .PHONY: all test
