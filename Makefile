@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-GO_TOOLCHAIN ?= go1.26.10
+GO_TOOLCHAIN ?= go1.26.11
 GO ?= $(shell command -v go 2>/dev/null || echo go)
 GO_LOCAL_ENV ?= env -u GOROOT GOTOOLCHAIN=$(GO_TOOLCHAIN)
 GO_DIR ?= go
