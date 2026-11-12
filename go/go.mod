@@ -1,6 +1,6 @@
 module github.com/mocachain/moca-common/go
 
-go 1.26.10
+go 1.26.11
 
 require (
 	github.com/cosmos/cosmos-sdk v0.53.7
